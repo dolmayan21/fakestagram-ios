@@ -10,12 +10,14 @@ import UIKit
 
 class PostCollectionViewCell: UICollectionViewCell {
 
-    var post: Post? {
+    static let identifier: String = "PostCell"
+    public var post: Post? {
         didSet {
-            updateContent()
+            updateView()
         }
     }
 
+    @IBOutlet weak var authorView: AuthorView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var likeCounter: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -32,18 +34,21 @@ class PostCollectionViewCell: UICollectionViewCell {
         print("to show comment")
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func reset() {
+        self.imageView.image = nil
+        self.likeCounter.text = ""
+        self.titleLabel.text = ""
     }
 
-    func updateContent(){
-        guard let post = self.post else { return}
-        //self.authorView.author = post.
+    func updateView() {
+        reset()
+        guard let post = self.post else { return }
+        self.authorView.author = post.author
         self.titleLabel.text = post.title
+        self.titleLabel.textColor = .black
+        self.likeCounter.text = post.likesCountText()
         post.load { [unowned self] img in
             self.imageView.image = img
         }
-
     }
 }

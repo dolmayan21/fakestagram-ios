@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Fakestagram-Xcode10
 //
-//  Created by Ruben Alejandro Leon Del Villar on 9/27/19.
+//  Created by Ruben Alejandro Leon Del Villaron 9/27/19.
 //  Copyright © 2019 unam. All rights reserved.
 //
 
