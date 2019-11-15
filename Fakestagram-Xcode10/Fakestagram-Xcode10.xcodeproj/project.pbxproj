@@ -38,6 +38,12 @@
 		7701BEBB233F1B1C0004C30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7701BEB9233F1B1C0004C30D /* LaunchScreen.storyboard */; };
 		7701BEC6233F1B1C0004C30D /* RequestBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7701BEC5233F1B1C0004C30D /* RequestBuilderTest.swift */; };
 		8C19C2964BDDB876DC23EA18 /* Pods_Fakestagram_Xcode10.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6487BC4A6C894AC3FCB0A8B6 /* Pods_Fakestagram_Xcode10.framework */; };
+		8E3AFE412377281A0063E9A4 /* CreatePostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3AFE402377281A0063E9A4 /* CreatePostService.swift */; };
+		8E57F70F237721C6002AB11F /* CheckSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E57F70E237721C6002AB11F /* CheckSum.m */; };
+		8E57F7112377259D002AB11F /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57F7102377259D002AB11F /* CacheImage.swift */; };
+		8E57F713237725D3002AB11F /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57F712237725D3002AB11F /* DataContainer.swift */; };
+		8E57F715237725FC002AB11F /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57F714237725FC002AB11F /* ImageStore.swift */; };
+		8E57F71723772624002AB11F /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E57F71623772624002AB11F /* StorageType.swift */; };
 		F4237714DC7ABD4F0CAE565D /* Pods_Fakestagram_Xcode10Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8A339C8EBE3992A9E89CAF /* Pods_Fakestagram_Xcode10Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +96,13 @@
 		7701BEC7233F1B1C0004C30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B8A339C8EBE3992A9E89CAF /* Pods_Fakestagram_Xcode10Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fakestagram_Xcode10Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82459500856F6D726FFB5B8E /* Pods-Fakestagram-Xcode10Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fakestagram-Xcode10Tests.release.xcconfig"; path = "Target Support Files/Pods-Fakestagram-Xcode10Tests/Pods-Fakestagram-Xcode10Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8E3AFE402377281A0063E9A4 /* CreatePostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostService.swift; sourceTree = "<group>"; };
+		8E57F70D237721C6002AB11F /* Fakestagram-Xcode10-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fakestagram-Xcode10-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E57F70E237721C6002AB11F /* CheckSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckSum.m; sourceTree = "<group>"; };
+		8E57F7102377259D002AB11F /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
+		8E57F712237725D3002AB11F /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
+		8E57F714237725FC002AB11F /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		8E57F71623772624002AB11F /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
 		D65BF6830E7358A7FE742F2E /* Pods-Fakestagram-Xcode10.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fakestagram-Xcode10.release.xcconfig"; path = "Target Support Files/Pods-Fakestagram-Xcode10/Pods-Fakestagram-Xcode10.release.xcconfig"; sourceTree = "<group>"; };
 		DDB3C91F541254DDBC4C4837 /* Pods-Fakestagram-Xcode10Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fakestagram-Xcode10Tests.debug.xcconfig"; path = "Target Support Files/Pods-Fakestagram-Xcode10Tests/Pods-Fakestagram-Xcode10Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +152,8 @@
 				6C5F57942348203100488E96 /* Credentials.swift */,
 				6C112494235B742900D8FAA4 /* UIImage+Base64.swift */,
 				6C30732C235AA3730063C3C5 /* UIDevice+models.swift */,
+				8E57F70E237721C6002AB11F /* CheckSum.m */,
+				8E57F70D237721C6002AB11F /* Fakestagram-Xcode10-Bridging-Header.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -192,6 +207,10 @@
 			children = (
 				6C1DC81A23516649001E8065 /* RestClient.swift */,
 				6C1DC81C2351666C001E8065 /* CodableSerializer.swift */,
+				8E57F7102377259D002AB11F /* CacheImage.swift */,
+				8E57F712237725D3002AB11F /* DataContainer.swift */,
+				8E57F714237725FC002AB11F /* ImageStore.swift */,
+				8E57F71623772624002AB11F /* StorageType.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -219,6 +238,7 @@
 		7701BEAF233F1B1B0004C30D /* Fakestagram-Xcode10 */ = {
 			isa = PBXGroup;
 			children = (
+				8E3AFE3F237727EE0063E9A4 /* Services */,
 				6C112496235B7C3200D8FAA4 /* ViewControllers */,
 				6C1DC82723523B6C001E8065 /* Views */,
 				6C1DC80A2351653E001E8065 /* Models */,
@@ -254,6 +274,14 @@
 				82459500856F6D726FFB5B8E /* Pods-Fakestagram-Xcode10Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E3AFE3F237727EE0063E9A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8E3AFE402377281A0063E9A4 /* CreatePostService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +337,7 @@
 				TargetAttributes = {
 					7701BEAC233F1B1B0004C30D = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					7701BEC0233F1B1C0004C30D = {
 						CreatedOnToolsVersion = 10.3;
@@ -432,18 +461,24 @@
 				6CB97272235B6B5D0052BDB2 /* CameraViewController.swift in Sources */,
 				6C30732D235AA3730063C3C5 /* UIDevice+models.swift in Sources */,
 				6C1DC81D2351666C001E8065 /* CodableSerializer.swift in Sources */,
+				8E3AFE412377281A0063E9A4 /* CreatePostService.swift in Sources */,
 				6C5F57952348203100488E96 /* Credentials.swift in Sources */,
 				6C1DC82C23523BB9001E8065 /* ShowPostViewController.swift in Sources */,
 				6C5656592358DBB800460C1E /* Like.swift in Sources */,
 				6C1DC80E2351656A001E8065 /* Post.swift in Sources */,
+				8E57F7112377259D002AB11F /* CacheImage.swift in Sources */,
 				7701BEB1233F1B1B0004C30D /* AppDelegate.swift in Sources */,
 				6C1DC81723516603001E8065 /* RequestBuilder.swift in Sources */,
+				8E57F713237725D3002AB11F /* DataContainer.swift in Sources */,
 				6C1DC80C23516554001E8065 /* Account.swift in Sources */,
 				6C5656552358DB9D00460C1E /* Author.swift in Sources */,
 				6C1DC82F23524732001E8065 /* AuthorView.swift in Sources */,
 				6C307327235A78350063C3C5 /* PostsViewController.swift in Sources */,
 				6C5656572358DBAB00460C1E /* Comment.swift in Sources */,
+				8E57F71723772624002AB11F /* StorageType.swift in Sources */,
 				6C30732A235A83A40063C3C5 /* PostCollectionViewCell.swift in Sources */,
+				8E57F715237725FC002AB11F /* ImageStore.swift in Sources */,
+				8E57F70F237721C6002AB11F /* CheckSum.m in Sources */,
 				6C1DC815235165E8001E8065 /* HttpResponse.swift in Sources */,
 				6C1DC811235165A8001E8065 /* Client.swift in Sources */,
 				6C1DC81B23516649001E8065 /* RestClient.swift in Sources */,
@@ -612,6 +647,7 @@
 			baseConfigurationReference = 46A679CEAFBC334DF6FC73B9 /* Pods-Fakestagram-Xcode10.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6FC73M3GHS;
 				INFOPLIST_FILE = "Fakestagram-Xcode10/Info.plist";
@@ -621,6 +657,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Fakestagram-Xcode10";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fakestagram-Xcode10/Utils/Fakestagram-Xcode10-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -631,6 +669,7 @@
 			baseConfigurationReference = D65BF6830E7358A7FE742F2E /* Pods-Fakestagram-Xcode10.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6FC73M3GHS;
 				INFOPLIST_FILE = "Fakestagram-Xcode10/Info.plist";
@@ -640,6 +679,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Fakestagram-Xcode10";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fakestagram-Xcode10/Utils/Fakestagram-Xcode10-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

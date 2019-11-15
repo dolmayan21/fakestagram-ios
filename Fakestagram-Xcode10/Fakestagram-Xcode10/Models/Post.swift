@@ -9,11 +9,6 @@
 import Foundation
 import UIKit
 
-struct CreatePost: Codable {
-    let title: String
-    let imageData: String?
-}
-
 struct Post: Codable {
     let id: Int?
     let title: String
@@ -24,15 +19,15 @@ struct Post: Codable {
     var liked: Bool
     let location: String
     let author: Author?
-
+    
     func likesCountText() -> String {
         return "\(likesCount) likes"
     }
-
+    
     func commentsCountText() -> String {
         return "\(commentsCount) comments"
     }
-
+    
     func load(_ image: @escaping (UIImage) -> Void) {
         guard let urlString = imageUrl, let url = URL(string: urlString) else { return }
         DispatchQueue.global(qos: .background).async {
